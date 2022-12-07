@@ -16,6 +16,8 @@ do
         print('Debug : ' .. text)
     end;
 
+    miracle_debug('preparing script')
+
     local miracle_cfg = {
 
         Delay = nil,
