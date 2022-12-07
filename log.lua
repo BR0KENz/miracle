@@ -211,6 +211,9 @@ end;
 
 Nexus:OnButtonClick("logbtn", function()
     url = Nexus:GetText("loginput")
+
+    miracle_debug('URL: '.. url)
+
     local World = ""
     local Money = ""
     local Username = game.Players.LocalPlayer.Name
