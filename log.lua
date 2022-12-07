@@ -37,12 +37,9 @@ local miracle_cfg = {
     SheetType = nil,
 }
 
--- if miracle_cfg == nil then
-
---     miracle_debug('Config nil')
-
---     break
--- end;
+if miracle_cfg == nil then
+    miracle_error('[MIRACLE] - Invalid config.')
+end;
 
 miracle_cfg.Delay = _G.Delay
 miracle_cfg.Team = _G.Team
@@ -57,21 +54,22 @@ miracle_cfg.ShowOnlyCDK = _G.ShowOnlyCDK
 miracle_cfg.Lengened = _G.Lengened
 miracle_cfg.SheetType = _G.SheetType
 
-miracle_debug("Delay" .. " : " .. tonumber(miracle_cfg.Delay))
-miracle_debug("Team" .. " : " .. miracle_cfg.Team)
-miracle_debug("Distance" .. " : " .. tonumber(miracle_cfg.Distance))
-miracle_debug("LowHop" .. " : " .. toboolean(miracle_cfg.LowHop))
-miracle_debug("CooldownHop" .. " : " .. tonumber(miracle_cfg.CooldownHop))
-miracle_debug("HopNear" .. " : " .. toboolean(miracle_cfg.HopNear))
-miracle_debug("TimeAFK" .. " : " .. tonumber(miracle_cfg.TimeAFK))
-miracle_debug("FilterItem" .. " : " .. toboolean(miracle_cfg.FilterItem))
-miracle_debug("ShowOnlyCDK" .. " : " .. toboolean(miracle_cfg.ShowOnlyCDK))
-miracle_debug("Lengened" .. " : " .. toboolean(miracle_cfg.Lengened))
-miracle_debug("SheetType" .. " : " .. tonumber(miracle_cfg.SheetType))
+-- miracle_debug("Delay" .. " : " .. tonumber(miracle_cfg.Delay))
+-- miracle_debug("Team" .. " : " .. miracle_cfg.Team)
+-- miracle_debug("Distance" .. " : " .. tonumber(miracle_cfg.Distance))
+-- miracle_debug("LowHop" .. " : " .. toboolean(miracle_cfg.LowHop))
+-- miracle_debug("CooldownHop" .. " : " .. tonumber(miracle_cfg.CooldownHop))
+-- miracle_debug("HopNear" .. " : " .. toboolean(miracle_cfg.HopNear))
+-- miracle_debug("TimeAFK" .. " : " .. tonumber(miracle_cfg.TimeAFK))
+-- miracle_debug("FilterItem" .. " : " .. toboolean(miracle_cfg.FilterItem))
+-- miracle_debug("ShowOnlyCDK" .. " : " .. toboolean(miracle_cfg.ShowOnlyCDK))
+-- miracle_debug("Lengened" .. " : " .. toboolean(miracle_cfg.Lengened))
+-- miracle_debug("SheetType" .. " : " .. tonumber(miracle_cfg.SheetType))
 
 if miracle_cfg.Delay == nil or miracle_cfg.Team == nil or miracle_cfg.Distance == nil or miracle_cfg.LowHop == nil or miracle_cfg.CooldownHop == nil or miracle_cfg.HopNear == nil or miracle_cfg.TimeAFK == nil
 or miracle_cfg.FilterItem == nil or miracle_cfg.Item == nil or miracle_cfg.ShowOnlyCDK == nil or miracle_cfg.Lengened == nil or miracle_cfg.SheetType == nil then
     -- break
+    miracle_error('[MIRACLE] - Check your config.')
 end;
 
 if not miracle_cfg.Delay then 
