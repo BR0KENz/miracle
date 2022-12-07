@@ -1464,6 +1464,7 @@ task.spawn(function()
     local cu = 0;
     local mx = miracle_cfg.TimeAFK;
     local q = nil;
+    local u = 0;
     spawn(function() 
 	    while true do wait(60) 
 		    if u == 0 then 
